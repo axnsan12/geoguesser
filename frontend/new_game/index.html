@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Flat UI</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		
+		<link href="css/style.css" rel="stylesheet">
+		<link rel="shortcut icon" href="images/favicon.ico">
+
+	</head>
+	<body>
+		<form name="filter" action="../make_game" method="post">
+			<ul>
+				<li>
+					<label class="checkbox">
+						<input type="checkbox" class="parent" name="continent" value="EU">
+						Europe
+					</label>
+					<ul>
+						<li>
+							<label class="checkbox">
+								<input type="checkbox" class="parent child" name="country" value="ROU" data-continent="EU">
+								Romania
+							</label>
+							<ul class="country-regions">
+								<li>
+									<label class="checkbox small">
+										<input type="checkbox" class="child" name="ROU" value="RO.AR" data-country="ROU">
+										Arad
+									</label>
+								</li>
+								<li>
+									<label class="checkbox small">
+										<input type="checkbox" class="child" name="ROU" value="RO.TM" data-country="ROU">
+										Timis
+									</label>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<label>
+								<input type="checkbox" class="parent child country" name="country" value="LUX" data-continent="EU">
+								Luxembourg
+							</label>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			
+			<input type="submit" value="submit" class="btn">
+		</form>
+		
+		
+		<!-- Load JS here for greater good =============================-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script src="js/check.js"></script>
+	</body>
+</html>

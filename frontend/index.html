@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Geoguesser</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBB9m_fov_CK3kpXmP1r2feSF7C2YTzjCM&v=3.exp&signed_in=false&libraries=geometry"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script src="maps.js"></script>
+		<script src="geoguesser.js"></script>
+		
+	</head>
+	<body>
+		<div id="streetview-canvas">
+			<div id="timer-container" style="display: none;">
+				<div id="timer">59:59</div>
+			</div>
+			<div id="control-panel-container">
+				<div id="control-panel">
+					<div id="map-holder">
+						<div id="map-canvas"></div>
+					</div>
+					<div id="controls">
+						<button type="button" id="make-guess" class="control-panel-button" disabled>Make guess</button>
+						<button type="button" id="back-to-start" class="control-panel-button">Back to start</button>
+						<button type="button" id="go-to-next" class="control-panel-button" style="display: none;">Go to next</button>
+						<div id="scoreboard">
+							<strong>Round:</strong> <span id="round">-/&#8734;</span> <strong>Score:</strong> <span id="score">0</span>
+						</div>
+						<div class='toggle-block' style="margin-top: 10px; float: right">
+							<input id="show-coverage" class="toggle" type="checkbox">
+							<label for="show-coverage"></label>
+							<span>Street View coverage</span>
+						</div>
+					</div>
+				</div>
+				<footer id="control-panel-footer">
+					<button type="button" id="toggle-panel" class="panel-shown"></button>
+				</footer>
+			</div>
+		</div>
+	</body>
+</html>
